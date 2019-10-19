@@ -1,7 +1,8 @@
 function Chamados(){
+    this._id;
     this._titulo;
     this._descricao;
-    this._imagem;
+    this._anexo;
     this._abribuido;
     this._solicitante;
 }
