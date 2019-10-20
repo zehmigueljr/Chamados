@@ -13,7 +13,6 @@ module.exports.chamados = function(application, req, res){
                     e.anexo = new Buffer(e.anexo).toString('base64');
                 });
             }
-                result.anexo = 
             res.status(200).json({
                 result
             });
@@ -22,8 +21,8 @@ module.exports.chamados = function(application, req, res){
 }
 
 module.exports.chamado = function(application, req, res){
-    const chamado = {
-        id : req.body.id
+    var chamado = {
+        id : req.params.id
     }
     console.log(chamado);
     const connection = application.config.dbConnection.getPool();
@@ -41,7 +40,6 @@ module.exports.chamado = function(application, req, res){
                     e.anexo = new Buffer(e.anexo).toString('base64');
                 });
             }
-                result.anexo = 
             res.status(200).json({
                 result
             });
@@ -67,7 +65,7 @@ module.exports.insertChamado = function(application, req, res){
 }
 
 module.exports.updateChamado = function(application, req, res){
-    const chamado = req.body.chamado;
+    var chamado = req.body.chamado;
     const connection = application.config.dbConnection.getPool();
     const chamadosRepository = new application.repositories.chamadosRepository(connection);
     chamadosRepository.UpdateChamado(chamado, function(error){
@@ -85,7 +83,7 @@ module.exports.updateChamado = function(application, req, res){
 
 
 module.exports.deleteChamado = function(application, req, res){
-    const chamado = {
+    var chamado = {
         id : req.body.id
     }
     const connection = application.config.dbConnection.getPool();

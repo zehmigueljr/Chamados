@@ -9,10 +9,7 @@ module.exports = {
         user     : 'root',
         password : 'Anateamo0106*',
         database : 'chamado'
-      })
-      pool.query('select 1 = 1', function(err, results){
-          console.log(err);
-      })
+      });
       return pool;
     }
 };
