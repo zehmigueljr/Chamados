@@ -28,3 +28,7 @@ UsuarioRepository.prototype.UpdateUsuario = function(usuario, callback){
     const sql = 'update usuario set nome = ?, email = ?, funcao = ?, data_cadastro = ?, data_atualizacao = ? where id = ?';
     this._connection.query(sql, [chamado.titulo, chamado.descricao, chamado.anexo, chamado.atribuido, chamado.solicitante, chamado.id], callback);
 }
+
+module.exports = function(){
+    return UsuarioRepository;
+}
