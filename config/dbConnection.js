@@ -8,7 +8,8 @@ module.exports = {
         host     : 'localhost',
         user     : 'root',
         password : 'Anateamo0106*',
-        database : 'chamado'
+        database : 'chamado',
+        port: 3306
       });
       return pool;
     }
