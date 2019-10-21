@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Middleware de chamados em Node.js rodando em Docker",
   "author": "José Miguel da Silveira Junior",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
